@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const fs = require('fs');
 const fetch = require("node-fetch");
 const prefix = "!";
+require('dotenv').config()
 
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -32,4 +33,4 @@ client.on('message', message => {
 
 });
 
-client.login(process.env['TOKEN']);
+client.login(process.env.TOKEN);
