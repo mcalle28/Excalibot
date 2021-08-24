@@ -1,0 +1,2 @@
+# Excalibot
+Excalibot for discord
